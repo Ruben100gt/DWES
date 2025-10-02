@@ -1,0 +1,21 @@
+{
+    "name": "rugoten/proyecto1",
+    "description": "Un proyecto de ejemplo de DWES",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Rugoten\\Proyecto1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rubén Gómez"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ramsey/uuid": "^4.9",
+        "nesbot/carbon": "^3.10",
+        "phroute/phroute": "^2.2"
+    }
+}
