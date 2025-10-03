@@ -37,13 +37,13 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 justify-content-between">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" aria-label="Aperture">
+                        <a class="nav-link" href="" aria-label="Aperture">
                             <svg class="bi" width="24" height="24" aria-hidden="true">
                                 <use xlink:href="#aperture"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../login">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Features</a>

@@ -1,6 +1,8 @@
 <?php
 include_once "vendor/autoload.php";
 include_once "env.php";
+include_once "auxiliar/funciones.php";
+
 
 //Directiva para insertar o utilizar la clase RouteCollector
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
@@ -22,8 +24,24 @@ $router->get('administrador', function(){
 $router->get('/login', function(){
     include_once "admin/views/index.php";
 });
+$router->post('/login', function(){
+    var_dump($_POST);
+});
+
+$router->delete('/pelicula/{id}', function($id){
+    echo "La pelicula a borrar tiene el id $id";
+});
 $router->get('/cajas', function(){
     include_once "admin/views/seeCages.php";
+});
+$router->get('/calculodni', function(){
+    $resultado ='';
+    if(isset($_GET['dni'])){
+        $resultado= calcularLetraDNI($_GET['dni']);
+    }else{
+        $resultado= "Parametro incorrecto";
+    }
+    include_once DIRECTORIO_VISTAS_ADMINISTRACION."calculo_letra_dni.php";
 });
 
 $router->get('/pass', function(){
