@@ -18,6 +18,11 @@ $router->get( '/',function(){
 
 });
 
+$router->get('/user',[UserController:class,'show']);
+
+$router->post('/user',[UserController:class,'store']);
+
+
 $router->get('administrador', function(){
     include_once "admin/views/welcome.php";
 });
