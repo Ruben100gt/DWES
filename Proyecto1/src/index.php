@@ -44,6 +44,17 @@ $router->get('/calculodni', function(){
     include_once DIRECTORIO_VISTAS_ADMINISTRACION."calculo_letra_dni.php";
 });
 
+$router->get('/administrador/add-pelicula', function(){
+    include_once "admin/views/add-pelicula.php";
+});
+
+$router->post('/pelicula', function(){
+    var_dump($_POST);
+    var_dump($_FILES);
+
+    organizarImagen($_FILES['poster'], $_POST['titulo']);
+});
+
 $router->get('/pass', function(){
     echo "Se va a generar una contraseña</br>";
     var_dump($_GET);
