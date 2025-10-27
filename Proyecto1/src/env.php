@@ -1,11 +1,18 @@
 <?php
 
-const DIRECTORIO_TEMPLETE = "views/template/";
-const DIRECTORIO_VISTAS = "views/";
-const DIRECTORIO_VISTAS_ADMINISTRACION = "admin/views/";
+//Constantes referents a la parte no visual de administración
+const DIRECTORIO_VISTAS_FRONTEND = "app/Views/frontend/";
+const DIRECTORIO_TEMPLETE_FRONTEND = DIRECTORIO_VISTAS_FRONTEND."template/";
+const DIRECTORIO_CSS_FRONTEND = DIRECTORIO_TEMPLETE_FRONTEND."dist/css/";
+const DIRECTORIO_IMG_FRONTEND = DIRECTORIO_TEMPLETE_FRONTEND."dist/img/";
+const DIRECTORIO_JS_FRONTEND = DIRECTORIO_TEMPLETE_FRONTEND."js/";
 
-const DIRECTORIO_TEMPLATE_ADMINISTRACION = "admin/views/template/";
-const DIRECTORIO_CSS = "views/template/dist/css/";
-const DIRECTORIO_IMG = "views/template/dist/img/";
 
-const DIRECTORIO_ADMIN_IMG ="/admin/views/template/dist/img/";
+//Constantes referents a la parte visual de administración
+const DIRECTORIO_VISTAS_BACKEND = "app/views/backend/";
+const DIRECTORIO_TEMPLATE_BACKEND = DIRECTORIO_VISTAS_BACKEND."template/";
+const DIRECTORIO_CSS_BACKEND = DIRECTORIO_TEMPLATE_BACKEND."dist/css/";
+const DIRECTORIO_IMG_BACKEND = DIRECTORIO_TEMPLATE_BACKEND."dist/img/";
+const DIRECTORIO_JS_BACKEND = DIRECTORIO_TEMPLATE_BACKEND."js/";
+
+

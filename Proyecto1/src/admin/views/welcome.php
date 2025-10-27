@@ -1,10 +1,10 @@
 <?php
 
-include_once("template/head.php");
-include_once("template/hamburger.php");
-include_once("template/header.php");
-include_once("template/main.php");
+include_once(DIRECTORIO_TEMPLETE_FRONTEND."head.php");
+include_once(DIRECTORIO_TEMPLETE_FRONTEND."hamburger.php");
+include_once(DIRECTORIO_TEMPLETE_FRONTEND."header.php");
+include_once(DIRECTORIO_TEMPLETE_FRONTEND."main.php");
 ?>
 
 <?php
-include_once("template/footer.php");
+include_once(DIRECTORIO_TEMPLETE_FRONTEND."footer.php");

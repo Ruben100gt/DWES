@@ -97,7 +97,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <img src="<?=DIRECTORIO_ADMIN_IMG?>samurai.png" style="width:935px; height:835px;">
+                <img src="<?=DIRECTORIO_IMG_FRONTEND?>samurai.png" style="width:935px; height:835px;">
             </div>
         </div>
         <div class="col-md-6">

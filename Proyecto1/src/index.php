@@ -3,6 +3,7 @@ include_once "vendor/autoload.php";
 include_once "env.php";
 include_once "auxiliar/funciones.php";
 
+session_start();
 
 //Directiva para insertar o utilizar la clase RouteCollector
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
@@ -23,20 +24,26 @@ $router->get( '/',function(){
 });
 
 //Rutas de Usuario CRUD
-//Rutas de Servicio API REST
+//Rutas asociadas a las vistas de usuario
+$router->get('user/{id}/edit',[UserController::class,'edit']);
 $router->get('/user/create',[UserController::class,'create']);
+$router->get('/login',[UserController::class,'show_login']);
+$router->post('/user/login',[UserController::class,'verify']);
+$router->get('/user/logout',[UserController::class,'logout']);
 
-
+//Rutas para la aplicación web visual
 $router->get('/user',[UserController::class,'index']);
 $router->get('user/{id}',[UserController::class,'show']);
 $router->post('/user',[UserController::class,'store']);
 $router->put('/user/{id}',[UserController::class,'update']);
 $router->delete('/user/{id}',[UserController::class,'destroy']);
 
-//Rutas asociadas a las vistas de usuario
-//$router->get('/user/create',[UserController::class,'create']);
-$router->get('user/{id}/edit',[UserController::class,'edit']);
-
+//Rutas del servicio API REST
+$router->get('/api/user',[UserController::class,'index']);
+$router->get('/api/user/{id}',[UserController::class,'show']);
+$router->post('/api/user',[UserController::class,'store']);
+$router->put('/api/user/{id}',[UserController::class,'update']);
+$router->delete('/api/user/{id}',[UserController::class,'destroy']);
 
 
 //Rutas de Peliculas CRUD
@@ -71,12 +78,6 @@ $router->delete('/director/{id}',[DirectorController::class,'destroy']);
 $router->get('administrador', function(){
     include_once "admin/views/welcome.php";
 });
-$router->get('/login', function(){
-    include_once "admin/views/index.php";
-});
-$router->post('/login', function(){
-    var_dump($_POST);
-});
 
 $router->delete('/pelicula/{id}', function($id){
     echo "La pelicula a borrar tiene el id $id";
@@ -91,7 +92,7 @@ $router->get('/calculodni', function(){
     }else{
         $resultado= "Parametro incorrecto";
     }
-    include_once DIRECTORIO_VISTAS_ADMINISTRACION."calculo_letra_dni.php";
+    include_once "admin/views/calculo_letra_dni.php";
 });
 
 $router->get('/administrador/add-pelicula', function(){

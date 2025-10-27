@@ -2,7 +2,7 @@
 
 namespace App\Class;
 
-use App\Enum\TipoUsuario;
+use App\Enum\TypeUsuario;
 
 class Director
 {

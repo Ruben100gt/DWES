@@ -12,10 +12,10 @@
         rel="canonical"
         href="https://getbootstrap.com/docs/5.3/examples/carousel/"
     />
-    <script src="<?=DIRECTORIO_TEMPLATE_ADMINISTRACION?>js/color-modes.js"></script>
-    <link href="<?=DIRECTORIO_TEMPLATE_ADMINISTRACION?>dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="<?=DIRECTORIO_TEMPLETE_FRONTEND?>js/color-modes.js"></script>
+    <link href="<?=DIRECTORIO_TEMPLETE_FRONTEND?>dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
-    <link href="<?=DIRECTORIO_TEMPLATE_ADMINISTRACION?>product.css" rel="stylesheet" />
+    <link href="<?=DIRECTORIO_TEMPLETE_FRONTEND?>product.css" rel="stylesheet" />
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
